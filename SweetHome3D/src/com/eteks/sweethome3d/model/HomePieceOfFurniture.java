@@ -103,11 +103,10 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
         }
       });
     SORTABLE_PROPERTY_COMPARATORS.put(SortableProperty.VOLUME, new Comparator<HomePieceOfFurniture>() {
-      public int compare(HomePieceOfFurniture piece1, HomePieceOfFurniture piece2) {
-        return HomePieceOfFurniture.compare(
-                piece1.getVolume(), piece2.getVolume());
-      }
-    });
+        public int compare(HomePieceOfFurniture piece1, HomePieceOfFurniture piece2) {
+          return HomePieceOfFurniture.compare(piece1.getVolume(), piece2.getVolume());
+        }
+      });
     SORTABLE_PROPERTY_COMPARATORS.put(SortableProperty.DEPTH, new Comparator<HomePieceOfFurniture>() {
         public int compare(HomePieceOfFurniture piece1, HomePieceOfFurniture piece2) {
           return HomePieceOfFurniture.compare(piece1.depth, piece2.depth);
@@ -552,9 +551,6 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
     return this.height;
   }
 
-  /**
-   * Returns the volume of this piece of furniture.
-   */
   @Override
   public float getVolume() {
     return getWidth() * getDepth() * getHeight();
